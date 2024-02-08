@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* CSS Styles */
+        .calculator {
+        background-color: aqua;
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            background-color: blue;
+            width: 200px;
+            padding: 10px;
+            font-size: 20px;
+        }
+        button { 
+            background-color: brown;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin: 5px;
+        }
+    </style>
+    <title>Advanced Calculator</title>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" disabled>
+    <br>
+    <button onclick="updateDisplay('1')">1</button>
+    <button onclick="updateDisplay('2')">2</button>
+    <button onclick="updateDisplay('3')">3</button>
+    <button onclick="updateDisplay('+')">+</button>
+    <br>
+    <button onclick="updateDisplay('4')">4</button>
+    <button onclick="updateDisplay('5')">5</button>
+    <button onclick="updateDisplay('6')">6</button>
+    <button onclick="updateDisplay('-')">-</button>
+    <br>
+    <button onclick="updateDisplay('7')">7</button>
+    <button onclick="updateDisplay('8')">8</button>
+    <button onclick="updateDisplay('9')">9</button>
+    <button onclick="updateDisplay('*')">*</button>
+    <br>
+    <button onclick="updateDisplay('0')">0</button>
+    <button onclick="updateDisplay('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="updateDisplay('/')">/</button>
+    <br>
+    <button onclick="clearDisplay()">C</button>
+</div>
+
+<script>
+    // JavaScript Functions
+    const display = document.getElementById('display');
+
+    function updateDisplay(value) {
+        display.value += value;
+    }
+
+    function calculate() {
+        try {
+            display.value = eval(display.value);
+        } catch (error) {
+            display.value = 'Error';
+        }
+    }
+
+    function clearDisplay() {
+        display.value = '';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+#table{
+    width: 50%;
+    margin: auto;
+
+}
+.btn{
+    width: 350px;
+    height: 200px;
+    background-color: aqua;
+    font-size: 3em;
+    color: #fff;
+
+
+}
+.btn:hover{
+    background-color: blueviolet;
+}

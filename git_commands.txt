@@ -1,0 +1,33 @@
+git basic commands
+
+-> git status
+-> git init
+-> git add filename
+-> git add .
+   ->add all untracked files and changes to staging area
+->git commit -m "new files added"
+ ->commit this file to repository
+-> git config --global user.email "madhusiddani29@gmail.com"
+-> git config --global user.name "Madhu Siddani"
+-> git diff
+ -> know exactly what you have changed
+-> git ls-files
+  -> list all files available in staging area 
+-> git rm filename 
+  -> remove this file from staging area and local directory
+-> git rm --cached filename
+ ->you want to keep the file in your hard disk but you don't want git to track this file anymore
+
+ Branch
+ ->git Branch 
+   -> returns all branches
+  -> git branch second-branch
+    -> create another branch whose name is second-branch
+  -> git checkout second-branch
+   ->switch to second-branch
+-> git checkout -b third-branch
+  -> create and switch to third-branch
+-> git remote add origin URL
+ -> connect local repository to remote repository
+-> git push - u origin main
+ -> push changes to remote repository from local repository
